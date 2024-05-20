@@ -1,0 +1,1366 @@
+Algoritmo ejercicio1
+	
+	Definir car Como Caracter;
+	Escribir "Introduce un caracter:";
+	Leer car;
+	
+	Si (car >= 'a' Y car <= 'z') O (car >= 'A' Y car <= 'Z') Entonces
+		Escribir "El caracter es una letra.";
+	Sino
+		Si car = ',' O car = '.' O car = ';' O car = ':' Entonces
+			Escribir "El caracter es un signo de puntuación.";
+		Sino
+			Escribir "El caracter es: ", car;
+		FinSi
+	FinSi
+	
+FinAlgoritmo
+.
+.
+.
+.
+.
+.
+Algoritmo ejercicio2
+	Definir car Como Caracter;
+	Escribir " ingrese un caracter o numero";
+	leer car;
+	Si car >= '0' Y car <= '9' Entonces
+		Escribir " el carracter es un numero";
+	SiNo
+		si car = 'a'  O car = 'e' O car = 'i' O  car = 'u'Entonces
+			Escribir " el caracter es vocal ";
+		SiNo
+			Escribir " EL CARACTER NO ES NUMERO Y TAMPOCO ES UNA VOCAL " , car ;
+			
+		FinSi
+	FinSi
+FinAlgoritmo
+
+.
+.
+.
+.
+.
+.
+Proceso ejercicio3
+	Definir vocal Como Caracter;
+	Escribir "Ingrese una vocal: ";
+	Leer vocal;
+	Si vocal = "a" o vocal = "e" o vocal = "i" o vocal = "o" o vocal = "u" Entonces
+		Escribir "El valor ASCII de la vocal ", vocal, " es: ", vocal;
+	SiNo
+		Escribir "El carácter ingresado no es una vocal.";
+	FinSi
+FinAlgoritmo
+.
+.
+.
+.
+.
+..
+Proceso ejercicio4
+	Definir nombre1 , nombre2 Como Caracter;
+	Escribir " ingrese un nombre ";
+	leer nombre1 ;
+	Escribir " infrese otro nombre ";
+	leer nombre2;
+	si nombre1 = nombre2 Entonces
+		Escribir " son iuales " ;
+	SiNo
+		si nombre1 < nombre2 Entonces
+			Escribir " su nombre 1 es menor que el segundo ";
+		SiNo
+			Escribir " SI NO INVALIDO";
+			
+			
+		FinSi
+		
+	FinSi
+FinProceso
+
+.
+.
+.
+Algoritmo ejercicio5
+	Definir num1 , num2 Como Entero;
+	Escribir " ingresun un  numero menor al 5";
+	leer num1;
+	Escribir " ingrese otro numero mayor al 5";
+	leer num2;
+	
+	Si num1 = num2 Entonces
+		Escribir " los numeros son iguales ";
+	SiNo
+		si num1 < num2 Entonces
+			Escribir "El primer número es menor que el segundo."num2;
+		SiNo
+			Escribir "El primer número no es menor que el segundo."num1;
+
+		FinSi
+		
+		FinSi
+FinAlgoritmo
+.
+.
+.
+.
+algoritmo Ejercicio6
+	// Entrada: Se espera que el usuario ingrese tres números reales.
+    // Proceso: Se determina el mayor de los tres números.
+	
+    Definir num1, num2, num3 Como Real;
+    
+    // Se solicita al usuario que ingrese el primer número.
+    Escribir "Ingrese el primer número: ";
+    Leer num1;
+    
+    // Se solicita al usuario que ingrese el segundo número.
+    Escribir "Ingrese el segundo número: ";
+    Leer num2;
+    
+    // Se solicita al usuario que ingrese el tercer número.
+    Escribir "Ingrese el tercer número: ";
+    Leer num3;
+    
+    // Se verifica si los tres números son iguales.
+    Si num1 = num2 y num1 = num3 Entonces
+        // Salida: Se informa al usuario que los tres números son iguales.
+        Escribir "Los tres números son iguales.";
+    Sino
+        // De Otro Modo: Si al menos un par de números es diferente.
+        Si num1 >= num2 y num1 >= num3 Entonces
+            // Salida: Se informa al usuario que el num1 es el mayor.
+            Escribir num1, " es el mayor.";
+        Sino
+            // De Otro Modo: Si num2 es mayor o igual que num1 y num3.
+            Si num2 >= num1 y num2 >= num3 Entonces
+                // Salida: Se informa al usuario que el num2 es el mayor.
+                Escribir num2, " es el mayor.";
+            Sino
+                // Salida: Se informa al usuario que el num3 es el mayor.
+                Escribir num3, " es el mayor.";
+            FinSi
+        FinSi
+    FinSi
+	
+FinAlgoritmo
+.
+.
+.
+.
+.
+.
+Algoritmo Ejercicio_7
+    // Declaración de variables
+    Definir numero Como Entero;
+    // Solicitar el número
+    Escribir "Ingrese un número:";
+    Leer numero;
+    // Verificar si el número es neutro, positivo o negativo
+    Si numero = 0 Entonces
+        Escribir "El número ingresado es neutro.";
+    Sino
+        Si numero > 0 Entonces
+            Escribir "El número ingresado es positivo.";
+        Sino
+            Escribir "El número ingresado es negativo.";
+        FinSi
+    FinSi
+FinAlgoritmo
+.
+.
+.
+.
+.
+.
+.
+algoritmo Ejercicio_8
+	// Entrada: Se espera que el usuario ingrese la cantidad de lápices a comprar.
+    // Proceso: Se calcula el costo total de los lápices según la cantidad ingresada.
+    // Salida: Se muestra al usuario el costo total de los lápices.
+	
+    Definir cantidadLapices Como Entero;
+    Definir costoTotal Como Real;
+    
+    // Se solicita al usuario que ingrese la cantidad de lápices.
+    Escribir "Ingrese la cantidad de lápices: ";
+    Leer cantidadLapices;
+    
+    // Se verifica si la cantidad de lápices es mayor a 1000.
+    Si cantidadLapices > 1000 Entonces
+        // Proceso: Se calcula el costo total con un precio unitario de 1 para más de 1000 lápices.
+        costoTotal <- cantidadLapices * 1;
+    Sino
+        // Proceso: Se calcula el costo total con un precio unitario de 1.50 para 1000 o menos lápices.
+        costoTotal <- cantidadLapices * 1.50;
+    FinSi
+    
+    // Salida: Se muestra al usuario el costo total de los lápices.
+    Escribir "El costo total es: ", costoTotal;
+FinAlgoritmo
+.
+.
+..
+.
+.
+
+
+.
+Algoritmo EJERCICIO9
+	Definir num Como Entero;
+	Escribir " ingrese un numero de mayor valor";
+	leer num;
+	
+	Si num > 2500 Entonces
+		Escribir "aplica al descuento 15% ";
+	SiNo
+		si num < 2500 Entonces
+			Escribir " solo tienes un despues 8% ";
+
+		FinSi
+	FinSi
+FinAlgoritmo
+.
+.
+.
+.
+.
+.
+Algoritmo Ejercicio10
+	Definir personas, costos, presupuesto Como Real;
+	
+	costos <-95.00;
+	Escribir "Ingresa el número de personas:";
+	Leer personas;
+	
+	Si personas <= 200 Entonces
+		presupuesto <- personas * costos;
+	SiNo;
+		Si personas <= 300 Entonces
+			costos <- 85.00;
+			presupuesto <- personas * costos;
+		SiNo;
+			costos <- 75.00;
+			presupuesto <- personas * costos;
+		FinSi;
+	FinSi;
+	Escribir "El presupuesto para el evento es ", presupuesto, " pesos.";
+FinAlgoritmo
+.
+.
+.
+Algoritmo EJERCICIO11	
+	Definir TI Como Caracter;
+	DEFINIR TA, P, K Como Real;
+	Escribir" ingrese el tipo de uva. A o B ";
+	leer TI;
+	Escribir " ingresar el tamaño de uva: 1 o 2 ";
+	leer TA;
+	Escribir" ingrese el precio de los kilos de uvas";
+	leer P;
+	Escribir " ingreSEe los kilos de uvas ";
+	leer K;
+	Si TI = "A" Entonces
+		Si TA <- 1 Entonces
+			P <- P + .2;
+		SiNo
+			P <- P + .3 ;
+		FinSi
+	SiNo
+		SI TA <- 1 Entonces
+			P <- P - .3;
+		SiNo
+			P <- P -.5;
+		FinSi
+	FinSi
+	TA <- P * K ;
+	Escribir " LA GANACIA ES ", TA;
+FinAlgoritmo
+.
+.
+.
+.
+.
+.
+.
+
+
+
+algoritmo Ejercicio_12
+	// Entrada: Se espera que el usuario ingrese la cantidad de alumnos.
+    // Proceso: Se calcula el costo por alumno, el costo total para todos los alumnos, el costo de la renta del autobús y el total a pagar a la compañía de autobuses.
+    // Salida: Se muestra al usuario el costo por alumno, el costo total para todos los alumnos, el costo de la renta del autobús y el total a pagar a la compañía de autobuses.
+	
+    Definir costoPorAlumno, costoTotalAlumnos, costoAutobus, totalPagarCompania Como Real;
+    Definir cantidadAlumnos Como Entero;
+    
+    // Se solicita al usuario que ingrese la cantidad de alumnos.
+    Escribir "Ingrese la cantidad de alumnos: ";
+    Leer cantidadAlumnos;
+    
+    // Se utiliza la estructura Si para determinar el costo por alumno según la cantidad de alumnos.
+    Si cantidadAlumnos >= 100 Entonces
+        costoPorAlumno <- 65.00;
+    Sino
+        Si cantidadAlumnos >= 50 y cantidadAlumnos <= 99 Entonces
+            costoPorAlumno <- 70.00;
+        Sino
+            Si cantidadAlumnos >= 30 y cantidadAlumnos <= 49 Entonces
+                costoPorAlumno <- 95.00;
+            Sino
+                costoPorAlumno <- 0.0 ; // Inicializar en caso de menos de 30 alumnos
+                costoAutobus <- 4000.00;
+            FinSi
+        FinSi
+    FinSi
+    
+    // Se utiliza la estructura Si para calcular el costo total para todos los alumnos y el total a pagar a la compañía de autobuses.
+    Si costoPorAlumno > 0.0 Entonces
+        costoTotalAlumnos <- cantidadAlumnos * costoPorAlumno;
+        totalPagarCompania <- costoTotalAlumnos;
+    Sino
+        totalPagarCompania <- costoAutobus;
+    FinSi
+    
+    // Salida: Se muestra al usuario el costo por alumno, el costo total para todos los alumnos, el costo de la renta del autobús y el total a pagar a la compañía de autobuses.
+    Escribir "El costo por alumno es: $", costoPorAlumno;
+    Escribir "El costo total para todos los alumnos es: $", costoTotalAlumnos;
+    Escribir "El costo de la renta del autobús es: $", costoAutobus;
+    Escribir "La compañía de autobuses debe recibir: $", totalPagarCompania;
+	
+FinAlgoritmo
+
+..
+.
+.
+.
+.
+.
+
+Proceso ejercicio13
+	Definir tipo Como Caracter;;
+	Definir k ,n Como Entero;
+	Definir precio, total Como Real;
+	escribir "los kilometros d RECORRER";
+	Leer k;
+	Escribir " TIPO DE AUTOBUS : A - B - C";
+	LEER tipo;
+	
+	escribir " ingresa un nuero persona "; 
+	leer n;
+	si tipo== "A"   O tipo =="B" O tipo == "C" Entonces
+		SI tipo = "A" Entonces
+			precio <- k * 2;
+		sino
+			si tipo = "B" Entonces
+				precio <- k * 2.5;
+			SiNo
+				precio <- k *3;
+			
+				
+			FinSi
+		FinSi
+	FinSi
+	si n <= 20 Entonces
+		total<- precio* 20;
+	SiNo
+		total<- precio * n;
+		
+	FinSi
+	Escribir " el total de pagar la resta de auto es ", total;
+	Escribir " el total a pagra por persona es ", total /n;
+FinProceso
+.
+.
+.
+.
+.
+Proceso _ejercicio14
+                
+		// Definir variables
+		Definir cantidad_colas Como Entero;
+		Definir costo_por_unidad, total_sin_iva, iva, total_a_pagar Como Real;
+		
+		// Leer la cantidad de colas compradas
+		Escribir "Ingrese la cantidad de colas compradas: ";
+		Leer cantidad_colas;
+		
+		// Determinar el costo por unidad
+		Si cantidad_colas > 23 
+			Entonces costo_por_unidad <- 0.50;
+		SiNo
+			costo_por_unidad <- 0.50 * 1.20;// 20% más
+		FinSi
+		
+		// Calcular el total sin IVA
+		total_sin_iva <- cantidad_colas * costo_por_unidad;
+		
+		// Calcular el IVA (12%)
+		iva <- total_sin_iva * 0.12;
+		
+		// Calcular el total a pagar
+		total_a_pagar <- total_sin_iva + iva;
+		
+		// Mostrar resultados
+		Escribir "Cantidad comprada: ", cantidad_colas;
+		Escribir "Costo por unidad: $", costo_por_unidad;
+		Escribir "Total sin IVA: $", total_sin_iva;
+		Escribir "IVA (12%): $", iva;
+		Escribir "Total a pagar: $", total_a_pagar;
+FinAlgoritmo
+.
+.
+.
+.
+.
+.
+.
+proceso ejercicio15
+		// Definir variables
+		Definir cantidad_productos Como Entero;
+		Definir precio_por_producto, descuento_inicial, total_sin_descuento_adicional, descuento_adicional, total_a_pagar Como Real;
+		
+		// Leer la cantidad de productos comprados y el precio por producto
+		Escribir "Ingrese la cantidad de productos comprados: ";
+		Leer cantidad_productos;
+		Escribir "Ingrese el precio por producto: ";
+		Leer precio_por_producto;
+		
+		// Determinar el descuento inicial
+		Si cantidad_productos > 19 Entonces
+			descuento_inicial <- 0.10;  // 10% de descuento
+		SiNo
+			descuento_inicial <- 0.20;  // 20% de descuento
+		FinSi
+		
+		// Calcular el total sin el descuento adicional
+		total_sin_descuento_adicional <- cantidad_productos * precio_por_producto * (1 - descuento_inicial);
+		
+		// Calcular el descuento adicional
+		descuento_adicional <- total_sin_descuento_adicional * 0.05;  // 5% de descuento adicional
+		
+		// Calcular el total a pagar
+		total_a_pagar <- total_sin_descuento_adicional - descuento_adicional;
+		
+		// Mostrar resultados
+		Escribir "Cantidad comprada: ", cantidad_productos;
+		Escribir "Precio original por producto: $", precio_por_producto;
+		Escribir "Descuento inicial: $", cantidad_productos * precio_por_producto * descuento_inicial;
+		Escribir "Total sin descuento adicional: $", total_sin_descuento_adicional;
+		Escribir "Descuento adicional (5%): $", descuento_adicional;
+		Escribir "Total a pagar: $", total_a_pagar;
+
+
+FinProceso
+.
+.
+.
+..
+.
+.
+
+algoritmo  Ejercicio16
+	// Entrada: Se espera que el usuario ingrese el número de la cita.
+    // Proceso: Se calcula el costo de la cita y el monto total gastado en el tratamiento según el número de la cita.
+    // Salida: Se muestra al usuario el costo de la cita y el monto total gastado en el tratamiento.
+	
+    Definir numeroCita, costoCita, montoTotalTratamiento Como Real;
+    
+    // Se solicita al usuario que ingrese el número de la cita.
+    Escribir "Ingrese el número de la cita: ";
+    Leer numeroCita;
+    
+    // Se utiliza la estructura Si para determinar el costo de la cita según el número de la cita.
+    Si numeroCita <= 3 Entonces
+        costoCita <- 200.00;
+    Sino
+        Si numeroCita <= 5 Entonces
+            costoCita <- 150.00;
+        Sino
+            Si numeroCita <= 8 Entonces
+                costoCita <- 100.00;
+            Sino
+                costoCita <- 50.00;
+            FinSi
+        FinSi
+    FinSi
+    
+    // Proceso: Se calcula el monto total gastado en el tratamiento según la distribución de citas especificada.
+    montoTotalTratamiento <- (3 * 200.00) + (2 * 150.00) + (3 * 100.00) + ((numeroCita - 8) * 50.00);
+    
+    // Salida: Se muestra al usuario el costo de la cita y el monto total gastado en el tratamiento.
+    Escribir "El paciente pagará $", costoCita, " por la cita.";
+    Escribir "El monto total gastado en el tratamiento es $", montoTotalTratamiento;
+	
+	// Fin del algoritmo.
+FinAlgoritmo
+.
+.
+.
+..
+.
+.
+.
+algoritmo Ejercicio17
+	// Entrada: Se espera que el usuario ingrese la clave del producto, el costo de la materia prima.
+    // Proceso: Se calcula el costo de la mano de obra, los gastos de fabricación, el costo de producción y el precio de venta según la clave del producto y el costo de la materia prima.
+    // Salida: Se muestra al usuario el costo de producción y el precio de venta.
+	
+    Definir claveProducto, costoMateriaPrima, costoManoDeObra, gastosFabricacion, costoProduccion, precioVenta Como Real;
+    
+    // Se solicita al usuario que ingrese la clave del producto.
+    Escribir "Ingrese la clave del producto (1, 2, 3, 4, 5 o 6): ";
+    Leer claveProducto;
+    
+    // Se solicita al usuario que ingrese el costo de la materia prima.
+    Escribir "Ingrese el costo de la materia prima: ";
+    Leer costoMateriaPrima;
+    
+    // Se utiliza la estructura Segun para calcular el costo de la mano de obra según la clave del producto.
+    Segun claveProducto Hacer
+		
+			// Caso: Si la clave del producto es 1 o 5.
+        Caso 1, 5:
+            // Proceso: Se calcula el costo de la mano de obra como el 80% del costo de la materia prima.
+            costoManoDeObra <- 0.80 * costoMateriaPrima;
+			// Caso: Si la clave del producto es 2 o 6.
+        Caso 2, 6:
+            // Proceso: Se calcula el costo de la mano de obra como el 85% del costo de la materia prima.
+            costoManoDeObra <- 0.85 * costoMateriaPrima;
+			// Caso: Si la clave del producto es 3 o 4.
+        Caso 3, 4:
+            // Proceso: Se calcula el costo de la mano de obra como el 75% del costo de la materia prima.
+            costoManoDeObra <- 0.75 * costoMateriaPrima;
+			// OtroCaso: Si la clave del producto no es 1, 2, 3, 4, 5 ni 6.
+        OtroCaso:
+            // Salida: Se informa al usuario que la clave de producto no es válida.
+            Escribir "Clave de producto no válida.";
+            // Se inicializa el costo de la mano de obra en 0.0.
+            costoManoDeObra <- 0.0;
+    FinSegun
+    
+    // Se utiliza la estructura Segun para calcular los gastos de fabricación según la clave del producto.
+    Segun claveProducto Hacer
+		
+			// Caso: Si la clave del producto es 2 o 5.
+        Caso 2, 5:
+            // Proceso: Se calculan los gastos de fabricación como el 30% del costo de la materia prima.
+            gastosFabricacion <- 0.30 * costoMateriaPrima;
+			// Caso: Si la clave del producto es 3 o 6.
+        Caso 3, 6:
+            // Proceso: Se calculan los gastos de fabricación como el 35% del costo de la materia prima.
+            gastosFabricacion <- 0.35 * costoMateriaPrima;
+			// Caso: Si la clave del producto es 1 o 4.
+        Caso 1, 4:
+            // Proceso: Se calculan los gastos de fabricación como el 28% del costo de la materia prima.
+            gastosFabricacion <- 0.28 * costoMateriaPrima;
+			// De Otro Modo: Si la clave del producto no es 1, 2, 3, 4, 5 ni 6.
+        De Otro Modo:
+            // Salida: Se informa al usuario que la clave de producto no es válida.
+            Escribir "Clave de producto no válida.";
+            // Se inicializan los gastos de fabricación en 0.0.
+            gastosFabricacion <- 0.0;
+    FinSegun
+    
+    // Proceso: Se calcula el costo de producción sumando el costo de la materia prima, el costo de la mano de obra y los gastos de fabricación.
+    costoProduccion <- costoMateriaPrima + costoManoDeObra + gastosFabricacion;
+    
+    // Proceso: Se calcula el precio de venta como el costo de producción más el 45% del costo de producción.
+    precioVenta <- costoProduccion + 0.45 * costoProduccion;
+    
+    // Salida: Se muestra al usuario el costo de producción y el precio de venta.
+    Escribir "El costo de producción es: ", costoProduccion;
+    Escribir "El precio de venta es: ", precioVenta;
+	
+FinAlgoritmo
+.
+.
+.
+.
+.
+..
+.
+.
+.
+.
+..
+.
+Proceso ejercicio18 
+	// Algoritmo para calcular el nuevo límite de crédito de una tarjeta de crédito
+		// Definir variables
+		Definir tipo_tarjeta Como Entero;
+		Definir limite_actual, nuevo_limite Como Real;
+		
+		// Leer el tipo de tarjeta
+		Escribir "Ingrese el tipo de tarjeta (1, 2, 3, otro): ";
+		Leer tipo_tarjeta;
+		
+		// Leer el límite de crédito actual
+		Escribir "Ingrese el límite de crédito actual: ";
+		Leer limite_actual;
+		
+		// Determinar el aumento según el tipo de tarjeta
+		Segun tipo_tarjeta Hacer
+			Caso 1:
+				nuevo_limite <- limite_actual * 1.25 ;// 25% de aumento
+			Caso 2:
+				nuevo_limite <- limite_actual * 1.35 ;// 35% de aumento
+			Caso 3:
+				nuevo_limite <- limite_actual * 1.40; // 40% de aumento
+			De Otro Modo:
+				nuevo_limite <- limite_actual * 1.50; // 50% de aumento
+		FinSegun
+		
+		// Mostrar el nuevo límite de crédito
+		Escribir "El nuevo límite de crédito es: $", nuevo_limite;
+		
+
+FinProceso
+.
+.
+.
+.
+..
+.
+.
+algoritmo Ejercicio19
+	// Entrada: Se espera que el usuario ingrese el peso del paquete y la zona de destino.
+    // Proceso: Se calcula el costo de envío según el peso y la zona de destino.
+    // Salida: Se muestra al usuario el costo de envío o un mensaje indicando que los paquetes con peso superior a 5kg no son transportados.
+	
+    Definir pesoPaquete Como Real;
+    Definir zonaDestino Como Caracter;
+    Definir costoEnvio Como Real;
+    
+    // Se solicita al usuario que ingrese el peso del paquete en kilogramos.
+    Escribir "Ingrese el peso del paquete en kilogramos: ";
+    Leer pesoPaquete;
+    
+    // Se utiliza una estructura Si para verificar si el peso del paquete es menor o igual a 5kg.
+    Si pesoPaquete <= 5 Entonces
+        // Se solicita al usuario que ingrese la zona de destino.
+        Escribir "Ingrese la zona de destino (A: América del Norte, B: América Central, C: América del Sur, E: Europa, AS: Asia): ";
+        Leer zonaDestino;
+        
+        // Se utiliza la estructura Segun para calcular el costo de envío según la zona de destino.
+        Segun zonaDestino Hacer
+			
+				// Caso: Si la zona de destino es América del Norte (A).
+				escribir"A";
+                // Proceso: Se asigna el costo de envío como $11.0.
+                costoEnvio <- 11.0;
+				// Caso: Si la zona de destino es América Central (B).
+				escribir"B";
+                // Proceso: Se asigna el costo de envío como $10.0.
+                costoEnvio <- 10.0;
+				// Caso: Si la zona de destino es América del Sur (C).
+				
+			escribir "C";
+                // Proceso: Se asigna el costo de envío como $12.0.
+                costoEnvio <- 12.0;
+				// Caso: Si la zona de destino es Europa (E).
+				
+			escribir"E";
+                // Proceso: Se asigna el costo de envío como $24.0.
+                costoEnvio <- 24.0;
+				// Caso: Si la zona de destino es Asia (AS).
+				
+			escribir"AS";
+                // Proceso: Se asigna el costo de envío como $27.0.
+                costoEnvio <- 27.0;
+				// De Otro Modo: Si la zona de destino no es A, B, C, E ni AS.
+            De Otro Modo:
+                // Salida: Se informa al usuario que la zona de destino no es válida.
+                Escribir "Zona de destino no válida.";
+                // Se inicializa el costo de envío en 0.0.
+                costoEnvio <- 0.0;
+        FinSegun
+        
+        // Se verifica si el costo de envío es mayor a 0.0 antes de mostrarlo.
+        Si costoEnvio > 0.0 Entonces
+            // Salida: Se muestra al usuario el costo de envío.
+            Escribir "El costo de envío es: $", costoEnvio;
+        FinSi
+		// De Otro Modo: Si el peso del paquete es superior a 5kg.
+    Sino
+        // Salida: Se informa al usuario que los paquetes con peso superior a 5kg no son transportados.
+        Escribir "Paquetes con peso superior a 5kg no son transportados.";
+    FinSi
+FinAlgoritmo
+
+	
+.
+.
+.
+.
+.
+.
+algoritmo Ejercicio_20
+	// Entrada: Se espera que el usuario ingrese el peso de los alumnos (0 para terminar).
+    // Proceso: Se clasifican y suman los pesos de los alumnos en diferentes rangos y se calcula el promedio para cada rango.
+    // Salida: Se muestra al usuario el número de alumnos y el promedio de peso para cada rango.
+	
+    Definir peso, totalAlumnos, alumnosMenos40, alumnos40a50, alumnos50a60, alumnosMas60 Como real;
+    Definir sumaMenos40, suma40a50, suma50a60, sumaMas60 Como Real;
+    
+    // Inicialización de variables
+    alumnosMenos40 <- 0;
+    alumnos40a50 <- 0;
+    alumnos50a60 <- 0;
+    alumnosMas60 <- 0;
+    sumaMenos40 <- 0;
+    suma40a50 <- 0;
+    suma50a60 <- 0;
+    sumaMas60 <- 0;
+    
+    // Se solicita al usuario que ingrese el peso de los alumnos (0 para terminar).
+    Escribir "Ingrese el peso de los alumnos (ingrese 0 para terminar): ";
+    Leer peso;
+    
+    // Se utiliza un bucle Mientras para procesar los pesos hasta que se ingrese 0.
+    Mientras peso <> 0 Hacer
+        // Se clasifica y suma los pesos en los diferentes rangos.
+        Si peso < 40 Entonces
+            alumnosMenos40 <- alumnosMenos40 + 1;
+            sumaMenos40 <- sumaMenos40 + peso;
+        Sino
+            Si peso >= 40 y peso < 50 Entonces
+                alumnos40a50 <- alumnos40a50 + 1;
+                suma40a50 <- suma40a50 + peso;
+            Sino
+                Si peso >= 50 y peso < 60 Entonces
+                    alumnos50a60 <- alumnos50a60 + 1;
+                    suma50a60 <- suma50a60 + peso;
+                Sino
+                    alumnosMas60 <- alumnosMas60 + 1;
+                    sumaMas60 <- sumaMas60 + peso;
+                FinSi
+            FinSi
+        FinSi
+        
+        // Se solicita al usuario que ingrese el peso de los alumnos (0 para terminar).
+        Escribir "Ingrese el peso de los alumnos (ingrese 0 para terminar): ";
+        Leer peso;
+    FinMientras
+    
+    // Se calcula el total de alumnos.
+    totalAlumnos <- alumnosMenos40 + alumnos40a50 + alumnos50a60 + alumnosMas60;
+    
+    // Se verifica si se ingresaron datos de peso de alumnos.
+    Si totalAlumnos > 0 Entonces
+        // Salida: Se muestra al usuario el número de alumnos y el promedio de peso para cada rango.
+        Escribir "Alumnos menos de 40 kg: ", alumnosMenos40, " Promedio: ", sumaMenos40 / alumnosMenos40;
+        Escribir "Alumnos entre 40 y 50 kg: ", alumnos40a50, " Promedio: ", suma40a50 / alumnos40a50;
+        Escribir "Alumnos entre 50 y 60 kg: ", alumnos50a60, " Promedio: ", suma50a60 / alumnos50a60;
+        Escribir "Alumnos más de 60 kg: ", alumnosMas60, " Promedio: ", sumaMas60 / alumnosMas60;
+		// De Otro Modo: Si no se ingresaron datos de peso de alumnos.
+    Sino
+        Escribir "No se ingresaron datos de peso de alumnos.";
+    FinSi
+	
+FinAlgoritmo
+
+..
+..
+.
+.
+.
+.
+.
+.
+.
+.
+.
+..
+algoritmo Ejercicio_21
+	// Entrada: Se espera que el usuario ingrese cuatro números.
+    // Proceso: Se verifican las relaciones entre los números, como si el primer número es la mitad del segundo y si el tercer número es divisor del cuarto.
+    // Salida: Se muestra al usuario el resultado de las verificaciones.
+	
+    Definir num1, num2, num3, num4 Como Entero;
+    
+    // Se solicita al usuario que ingrese el primer número.
+    Escribir "Ingrese el primer número: ";
+    Leer num1;
+    
+    // Se solicita al usuario que ingrese el segundo número.
+    Escribir "Ingrese el segundo número: ";
+    Leer num2;
+    
+    // Se solicita al usuario que ingrese el tercer número.
+    Escribir "Ingrese el tercer número: ";
+    Leer num3;
+    
+    // Se solicita al usuario que ingrese el cuarto número.
+    Escribir "Ingrese el cuarto número: ";
+    Leer num4;
+    
+    // Se utiliza una estructura Si para verificar si el primer número es la mitad del segundo.
+    Si num1 * 2 = num2 Entonces
+        // Salida: Se informa al usuario que el primer número es la mitad del segundo.
+        Escribir num1, " es la mitad de ", num2;
+		// De Otro Modo: Si el primer número no es la mitad del segundo.
+    Sino
+        // Salida: Se informa al usuario que el primer número no es la mitad del segundo.
+        Escribir num1, " no es la mitad de ", num2;
+    FinSi
+    
+    // Se utiliza otra estructura Si para verificar si el tercer número es divisor del cuarto.
+    Si num4 MOD num3 = 0 Entonces
+        // Salida: Se informa al usuario que el tercer número es divisor del cuarto.
+        Escribir num3, " es divisor de ", num4;
+		// De Otro Modo: Si el tercer número no es divisor del cuarto.
+    Sino
+        // Salida: Se informa al usuario que el tercer número no es divisor del cuarto.
+        Escribir num3, " no es divisor de ", num4;
+    FinSi
+	
+FinAlgoritmo
+
+
+
+
+
+
+
+.
+.
+proceso Ejercicio22
+    // Declaración de variables
+    Definir numero1, numero2, numero3 Como Real;
+    // Solicitar los tres números
+    Escribir "Ingrese el primer número:";
+    Leer numero1;
+    Escribir "Ingrese el segundo número:";
+    Leer numero2;
+    Escribir "Ingrese el tercer número:";
+    Leer numero3;
+    // Verificar si el número 1 es el doble del número 2 y 20% menos que el número 3
+    Si numero1 = 2 * numero2 Y numero1 = numero3 * 0.8 Entonces
+        Escribir "El primer número es el doble del segundo número y un 20% menos que el tercer número.";
+    Sino
+        Escribir "El primer número no cumple con las condiciones establecidas.";
+    FinSi
+FinProceso
+
+.
+.
+.
+.
+Algoritmo EJERCICIO23
+	Definir num Como Entero;
+	Escribir " ingrese un nuero de la semana ";
+	leer num;
+	
+	Si num = 1 Entonces
+		Escribir " lunes ";
+	SiNo
+		Si num= 2 Entonces
+			Escribir " MARTES";
+		SiNo
+			Si num=3 Entonces
+				Escribir " miercoles" ;
+			SiNo
+				si num=4 Entonces
+					Escribir " jueves";
+				SiNo
+					si num=5 Entonces
+						Escribir " viernes";
+					SiNo
+						si num=6 Entonces
+							Escribir " sabado";
+						SiNo
+							si num= 7 Entonces
+								Escribir " domingo";
+							SiNo
+								Escribir "invalido";
+							FinSi
+						FinSi
+					FinSi
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+FinAlgoritmo
+.
+.
+.
+..
+.
+
+algoritmo Ejercicio24
+	// Entrada: Se espera que el usuario ingrese un número del 1 al 12 representando un mes del año.
+    // Proceso: Se utiliza una estructura Segun para determinar el nombre del mes correspondiente al número ingresado.
+    // Salida: Se muestra al usuario el nombre del mes correspondiente o se informa de un error si el número no es válido.
+	
+    Definir numeroMes Como Entero;
+    
+    // Se solicita al usuario que ingrese un número del 1 al 12.
+    Escribir "Ingrese un número del 1 al 12: ";
+    Leer numeroMes;
+    
+    // Se utiliza una estructura Segun para asignar el nombre del mes correspondiente al número ingresado.
+    Segun numeroMes Hacer
+		
+			// Caso 1: Si el número es 1, se muestra "Enero".
+        Caso 1:
+            Escribir "Enero";
+			// Caso 2: Si el número es 2, se muestra "Febrero".
+        Caso 2:
+            Escribir "Febrero";
+			// Caso 3: Si el número es 3, se muestra "Marzo".
+        Caso 3:
+            Escribir "Marzo";
+			// Caso 4: Si el número es 4, se muestra "Abril".
+        Caso 4:
+            Escribir "Abril";
+			// Caso 5: Si el número es 5, se muestra "Mayo".
+        Caso 5:
+            Escribir "Mayo";
+			// Caso 6: Si el número es 6, se muestra "Junio".
+        Caso 6:
+            Escribir "Junio";
+			// Caso 7: Si el número es 7, se muestra "Julio".
+        Caso 7:
+            Escribir "Julio";
+			// Caso 8: Si el número es 8, se muestra "Agosto".
+        Caso 8:
+            Escribir "Agosto";
+			// Caso 9: Si el número es 9, se muestra "Septiembre".
+        Caso 9:
+            Escribir "Septiembre";
+			// Caso 10: Si el número es 10, se muestra "Octubre".
+        Caso 10:
+            Escribir "Octubre";
+			// Caso 11: Si el número es 11, se muestra "Noviembre".
+        Caso 11:
+            Escribir "Noviembre";
+			// Caso 12: Si el número es 12, se muestra "Diciembre".
+        Caso 12:
+            Escribir "Diciembre";
+			// De Otro Modo: Si el número no es válido, se muestra un mensaje de error.
+        De Otro Modo:
+            Escribir "Error: Ingrese un número válido del 1 al 12.";
+    FinSegun
+FinAlgoritmo.
+.
+.
+.
+.
+.
+.
+
+.
+Algoritmo Ejercicio25
+    // Declaración de variables
+    Definir estatura, suma_estaturas Como Real;
+    Definir contador_personas Como Entero;
+    // Inicializar acumulador y contador
+    suma_estaturas <- 0;
+    contador_personas <- 0;
+    // Ciclo para ingresar estaturas y calcular la suma
+    Repetir
+        // Solicitar la estatura
+        Escribir "Ingrese la estatura de la persona (en metros) o 0 para terminar:";
+        Leer estatura;
+        // Verificar si se ingresó una estatura válida
+        Si estatura > 0 Entonces
+            // Acumular la estatura y aumentar el contador de personas
+            suma_estaturas <- suma_estaturas + estatura;
+            contador_personas <- contador_personas + 1;
+        FinSi
+    Hasta Que estatura = 0
+    
+    // Calcular el promedio de estaturas
+    Si contador_personas > 0 Entonces
+        estatura <- suma_estaturas / contador_personas;
+        Escribir "La estatura promedio del grupo es:", estatura, " metros.";
+    Sino
+        Escribir "No se ingresaron estaturas válidas.";
+    FinSi
+FinAlgoritmo
+.
+.
+.
+.
+.
+.
+.
+
+
+Algoritmo Ejercicio26
+	Definir Contador Como Entero;
+	Contador<- 0;
+	//imprimir desde o hasta 100 en pasos de 2
+	Mientras Contador <= 100 Hacer
+		//imprimir numeros pares
+		Escribir Contador;
+		//Aumentar el contador en 2 para obtener los numeros pares
+		Contador <- Contador + 2;
+	FinMientras
+FinAlgoritmo
+.
+.
+.
+.
+.
+Algoritmo ejericio27
+	Definir x,n,suma Como Real;
+	suma<- 0;
+	Para x <- 1 hasta 10 Con Paso  1 hacer
+		Escribir " ingresa un numero ";
+		leer n;
+		suma <- suma +n;
+	FinPara
+	escribir" la suma de los valores " , suma;
+	
+FinAlgoritmo
+.
+.
+.
+.
+.
+.
+Algoritmo Ejercicio28
+	Definir N, edad, Suma_edades Como Entero;
+	Definir Contador Como Entero;
+	Definir Promedio Como Real;
+	//Introduccir la suma de edades
+	Suma_edades <- 0;
+	Escribir "Ingrese el numéro de alumnos (N):";
+	Leer N;
+	//Ingresar para obtener las edades de los N alumnos
+	Para Contador <- 1 Hasta N Hacer
+		Escribir "Ingresar la edad del alumno ", Contador, ": ";
+		Leer edad;
+		//sumar la edad al acumulador de edades
+		Suma_edades <- Suma_edades + edad;
+	FinPara
+	//Calcular el promedio de las edades
+	Promedio <- Suma_edades / N;
+	//Mostrar el promedio de edades
+	Escribir "La edad Promedio de los ", N, "alumnos es: ", Promedio;
+FinAlgoritmo
+.
+.
+.
+.
+.
+.
+Algoritmo Ejercicio29
+	Definir valor_hora, horas_trabajadas, total_horas, sueldo_total como real;
+	Definir contador como entero;
+	// Inicializar el total de horas y el sueldo total
+	total_horas <- 0;
+	sueldo_total <- 0;
+	Escribir "Ingrese el valor por hora trabajada: ";
+	Leer valor_hora;
+	// Iterar para obtener las horas trabajadas durante 20 días
+	Para contador <- 1 Hasta 20 Hacer
+		Escribir "Ingrese las horas trabajadas del día ", contador, ": ";
+		Leer horas_trabajadas;
+		// Sumar las horas trabajadas al total de horas
+		total_horas <- total_horas + horas_trabajadas;
+	Fin Para
+	// Calcular el sueldo total
+	sueldo_total <- total_horas * valor_hora;
+	// Mostrar el total de horas y el sueldo total
+	Escribir "Total de horas trabajadas durante el mes: ", total_horas;
+	Escribir "Sueldo total a recibir por las horas trabajadas: ", sueldo_total;
+FinAlgoritmo
+.
+.
+.
+.
+.
+.
+Algoritmo Ejercicio30
+    Definir N, monto, ventas_mayor_1000, ventas_entre_500_1000, ventas_menor_500, total_mayor_1000, total_entre_500_1000, total_menor_500, total_global Como entero;
+    Definir contador Como entero;
+    // Inicializar contadores y totales
+    ventas_mayor_1000 <- 0;
+    ventas_entre_500_1000 <- 0;
+    ventas_menor_500 <- 0;
+    total_mayor_1000 <- 0;
+    total_entre_500_1000 <- 0;
+    total_menor_500 <- 0;
+    total_global <- 0;
+    Escribir "Ingrese el número de ventas realizadas durante el día (N): ";
+    Leer N;
+    // Iterar para obtener el monto de cada venta y categorizarlas
+    Para contador <- 1 Hasta N Hacer
+        Escribir "Ingrese el monto de la venta ", contador, ": ";
+        Leer monto;
+        // Categorizar la venta según el monto
+        Si monto > 1000 Entonces
+            ventas_mayor_1000 <- ventas_mayor_1000 + 1;
+            total_mayor_1000 <- total_mayor_1000 + monto;
+        Sino
+            Si monto > 500 Entonces
+                ventas_entre_500_1000 <- ventas_entre_500_1000 + 1;
+                total_entre_500_1000 <- total_entre_500_1000 + monto;
+            Sino
+                ventas_menor_500 <- ventas_menor_500 + 1;
+                total_menor_500 <- total_menor_500 + monto;
+            Fin Si
+        Fin Si
+        // Actualizar el total global
+        total_global <- total_global + monto;
+    Fin Para
+    // Mostrar resultados
+    Escribir "Ventas mayores a $1000: ", ventas_mayor_1000;
+    Escribir "Monto total de ventas mayores a $1000: $", total_mayor_1000;
+    Escribir "Ventas entre $500 y $1000: ", ventas_entre_500_1000;
+    Escribir "Monto total de ventas entre $500 y $1000: $", total_entre_500_1000;
+    Escribir "Ventas menores o iguales a $500: ", ventas_menor_500;
+    Escribir "Monto total de ventas menores o iguales a $500: $", total_menor_500;
+    Escribir "Monto total de ventas del día: $", total_global;
+FinAlgoritmo
+.
+.
+.
+.
+.
+.
+Algoritmo Ejercicio31
+    Definir N, i Como Entero;
+    Definir NotaLogica, NotaRequerimientos, NotaCalculos Como Real;
+    Definir PromedioLogica, PromedioRequerimientos, PromedioCalculos Como Real;
+    Definir PromedioGeneral Como Real;
+    // Inicializar variables
+    PromedioLogica <- 0;
+    PromedioRequerimientos <- 0;
+    PromedioCalculos <- 0;
+    PromedioGeneral <- 0;
+    Escribir "Ingrese el número de alumnos:";
+    Leer N;
+	
+    Para i <- 1 Hasta N Hacer
+        Escribir "Ingrese la nota de Logica del alumno ", i, ":";
+        Leer NotaLogica;
+        Escribir "Ingrese la nota de Requerimientos del alumno ", i, ":";
+        Leer NotaRequerimientos;
+        Escribir "Ingrese la nota de Calculos del alumno ", i, ":";
+        Leer NotaCalculos;
+		
+        // Acumular las notas para calcular el promedio de cada asignatura
+        PromedioLogica <- PromedioLogica + NotaLogica;
+        PromedioRequerimientos <- PromedioRequerimientos + NotaRequerimientos;
+        PromedioCalculos <- PromedioCalculos + NotaCalculos;
+    FinPara
+    // Calcular el promedio de cada asignatura
+    PromedioLogica <- PromedioLogica / N;
+    PromedioRequerimientos <- PromedioRequerimientos / N;
+    PromedioCalculos <- PromedioCalculos / N;
+    // Calcular el promedio general
+    PromedioGeneral <- (PromedioLogica + PromedioRequerimientos + PromedioCalculos) / 3;
+    // Mostrar resultados
+    Escribir "Promedio de la asignatura Logica:", PromedioLogica;
+    Escribir "Promedio de la asignatura Requerimientos:", PromedioRequerimientos;
+    Escribir "Promedio de la asignatura Calculos:", PromedioCalculos;
+    Escribir "Promedio general de todas las asignaturas:", PromedioGeneral;
+FinAlgoritmo
+.
+.
+.
+.
+.
+.
+Algoritmo  Ejercicio32
+    Definir sueldo, incremento, suma_sueldos_aux, suma_bonos_aux, suma_sueldos_agg, suma_bonos_agg, suma_sueldos_pri, suma_bonos_pri Como Real;
+    Definir categoria Como Cadena;
+    Definir contador_aux, contador_agg, contador_pri Como Entero;
+    // Inicializar acumuladores y contadores
+    suma_sueldos_aux <- 0;
+    suma_bonos_aux <- 0;
+    suma_sueldos_agg <- 0;
+    suma_bonos_agg <- 0;
+    suma_sueldos_pri <- 0;
+    suma_bonos_pri <- 0;
+    contador_aux <- 0;
+    contador_agg <- 0;
+    contador_pri <- 0;
+    // Ciclo para pedir datos hasta ingresar una categoría inexistente
+    Repetir
+        // Solicitar categoría
+        Escribir "Ingrese la categoría del profesor (Auxiliar, Agregado, Principal) o una categoría inexistente para terminar:";
+        Leer categoria;
+        
+        // Verificar si la categoría es válida
+        Si categoria = "Auxiliar" O categoria = "Agregado" O categoria = "Principal" Entonces
+            // Solicitar sueldo
+            Escribir "Ingrese el sueldo del profesor:";
+            Leer sueldo;
+            // Calcular bonos y acumular
+            Si categoria = "Auxiliar" Entonces
+                incremento <- sueldo * 0.10;
+                suma_sueldos_aux <- suma_sueldos_aux + sueldo;
+                suma_bonos_aux <- suma_bonos_aux + incremento;
+                contador_aux <- contador_aux + 1;
+            FinSi
+            
+            Si categoria = "Agregado" Entonces
+                incremento <- sueldo * 0.20;
+                suma_sueldos_agg <- suma_sueldos_agg + sueldo;
+                suma_bonos_agg <- suma_bonos_agg + incremento;
+                contador_agg <- contador_agg + 1;
+            FinSi
+            
+            Si categoria = "Principal" Entonces
+                incremento <- sueldo * 0.50;
+                suma_sueldos_pri <- suma_sueldos_pri + sueldo;
+                suma_bonos_pri <- suma_bonos_pri + incremento;
+                contador_pri <- contador_pri + 1;
+            FinSi
+        FinSi
+    Hasta Que categoria <> "Auxiliar" Y categoria <> "Agregado" Y categoria <> "Principal"
+    // Calcular promedios
+    Si contador_aux > 0 Entonces
+        promedio_sueldos_aux <- suma_sueldos_aux / contador_aux;
+        promedio_bonos_aux <- suma_bonos_aux / contador_aux;
+    SiNo
+        promedio_sueldos_aux <- 0;
+        promedio_bonos_aux <- 0;
+    FinSi
+    Si contador_agg > 0 Entonces
+        promedio_sueldos_agg <- suma_sueldos_agg / contador_agg;
+        promedio_bonos_agg <- suma_bonos_agg / contador_agg;
+    SiNo
+        promedio_sueldos_agg <- 0;
+        promedio_bonos_agg <- 0;
+    FinSi
+    Si contador_pri > 0 Entonces
+        promedio_sueldos_pri <- suma_sueldos_pri / contador_pri;
+        promedio_bonos_pri <- suma_bonos_pri / contador_pri;
+    SiNo
+        promedio_sueldos_pri <- 0;
+        promedio_bonos_pri <- 0;
+    FinSi
+    // Mostrar resultados
+    Escribir "Promedio de sueldos y bonos por categoría:";
+    Escribir "Auxiliar - Sueldo promedio: ", promedio_sueldos_aux, " Bono promedio: ", promedio_bonos_aux;
+    Escribir "Agregado - Sueldo promedio: ", promedio_sueldos_agg, " Bono promedio: ", promedio_bonos_agg;
+    Escribir "Principal - Sueldo promedio: ", promedio_sueldos_pri, " Bono promedio: ", promedio_bonos_pri;
+FinAlgoritmo
+.
+.
+.
+.
+.
+.
+
+Algoritmo ejercicio33
+	Definir  distancia ,i, totalPasajes, totalKilometros, pasajesMenor100km, pasajesMayor100km, promedioPasajes, incremento20, precioPasaje Como Real;
+    totalPasajes <- 0;
+    totalKilometros <- 0;
+    pasajesMenor100km <- 0;
+    pasajesMayor100km <- 0;
+    precioPasaje <- 0;
+	
+    Escribir "Ingrese la cantidad de viajes:";
+    Leer totalPasajes;
+	
+    Para i <- 1 Hasta totalPasajes Con Paso 1 Hacer
+        Escribir "Ingrese el recorrido en kilómetros del viaje ", i, ":";
+        Leer distancia;
+		
+        totalKilometros <- totalKilometros + distancia;
+		
+        Si distancia <= 100 Entonces
+            precioPasaje <- precioPasaje + distancia;
+            pasajesMenor100km <- pasajesMenor100km + 1;
+        FinSi
+		
+        Si distancia > 100 Entonces
+            incremento20 <- distancia * 0.20;
+            precioPasaje <- precioPasaje + distancia + incremento20;
+            pasajesMayor100km <- pasajesMayor100km + 1;
+        FinSi
+    FinPara
+	
+    promedioPasajes <- precioPasaje / totalPasajes;
+	
+    Escribir "El promedio de precio de los pasajes es: ", promedioPasajes;
+    Escribir "Cantidad de pasajes con recorrido hasta 100km: ", pasajesMenor100km;
+    Escribir "Cantidad de pasajes con recorrido mayor a 100km: ", pasajesMayor100km;
+FinAlgoritmo
+.
+.
+.
+.
+.
+.
+.
+Algoritmo Ejercicio34
+    // Declaración de variables
+    Definir numero, suma, promedio Como Real;
+    Definir cantidad Como Entero;
+    // Inicializar acumuladores y contadores
+    suma <- 0;
+    cantidad <- 0;
+    // Ciclo para leer y presentar números distintos de cero
+    Repetir
+        // Solicitar número
+        Escribir "Ingrese un número (0 para terminar):";
+        Leer numero;
+        // Verificar si el número es distinto de cero
+        Si numero <> 0 Entonces
+            // Acumular la suma y contar los números
+            suma <- suma + numero;
+            cantidad <- cantidad + 1;
+            // Presentar el número ingresado
+            Escribir "Número ingresado: ", numero;
+        FinSi
+    Hasta Que numero = 0
+    // Calcular el promedio si hay números ingresados
+    Si cantidad > 0 Entonces
+        promedio <- suma / cantidad;
+    SiNo
+        promedio <- 0;
+    FinSi
+    // Presentar la cantidad y el promedio de los valores distintos de cero
+    Escribir "Cantidad de números distintos de cero: ", cantidad;
+    Escribir "Promedio de números distintos de cero: ", promedio;
+FinAlgoritmo
+
+.
+.
+.
+.
+.
+.
+
+Algoritmo Ejercicio35
+    // Declaración de variables
+    Definir numero, total_multiplos_de_3 Como Entero;
+    Definir cantidad_multiplos_de_3 Como Entero;
+    
+    // Inicializar acumuladores y contadores
+    total_multiplos_de_3 <- 0;
+    cantidad_multiplos_de_3 <- 0;
+    
+    // Ciclo para leer y presentar números positivos
+    Repetir
+        // Solicitar número
+        Escribir "Ingrese un número positivo (un valor negativo para terminar):";
+        Leer numero;
+        
+        // Verificar si el número es positivo
+        Si numero >= 0 Entonces
+            // Presentar el número ingresado
+            Escribir "Número ingresado: ", numero;
+            
+            // Verificar si el número es múltiplo de 3
+            Si numero MOD 3 = 0 Entonces
+                // Acumular el total y contar los números múltiplos de 3
+                total_multiplos_de_3 <- total_multiplos_de_3 + numero;
+                cantidad_multiplos_de_3 <- cantidad_multiplos_de_3 + 1;
+            FinSi
+        FinSi
+    Hasta Que numero < 0
+    
+    // Presentar la cantidad y el total de los números positivos múltiplos de 3
+    Escribir "Cantidad de números positivos múltiplos de 3: ", cantidad_multiplos_de_3;
+    Escribir "Total de números positivos múltiplos de 3: ", total_multiplos_de_3;
+FinAlgoritmo
